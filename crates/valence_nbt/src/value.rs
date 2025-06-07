@@ -7,8 +7,8 @@ use crate::tag::Tag;
 use crate::{Compound, List};
 
 /// Represents an arbitrary NBT value.
-#[derive(Clone, Debug)]
-pub enum Value<S = String> {
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub enum Value<S: std::hash::Hash = String> {
     Byte(i8),
     Short(i16),
     Int(i32),

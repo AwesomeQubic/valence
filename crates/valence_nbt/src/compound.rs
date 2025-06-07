@@ -8,7 +8,7 @@ use crate::Value;
 
 /// A map type with [`String`] keys and [`Value`] values.
 #[derive(Clone, Default, PartialEq, Eq)]
-pub struct Compound<S = String> {
+pub struct Compound<S: std::hash::Hash = String> {
     map: Map<S>,
 }
 
