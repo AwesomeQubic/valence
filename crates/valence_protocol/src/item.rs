@@ -6,7 +6,7 @@ use valence_nbt::Compound;
 use crate::{Decode, Encode};
 
 /// A stack of items in an inventory.
-#[derive(Clone, PartialEq, Debug, Default)]
+#[derive(Clone, PartialEq, Eq, Debug, Default)]
 pub struct ItemStack {
     pub item: ItemKind,
     pub count: i8,

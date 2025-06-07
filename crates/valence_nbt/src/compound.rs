@@ -7,7 +7,7 @@ use std::ops::{Index, IndexMut};
 use crate::Value;
 
 /// A map type with [`String`] keys and [`Value`] values.
-#[derive(Clone, Default)]
+#[derive(Clone, Default, PartialEq, Eq)]
 pub struct Compound<S = String> {
     map: Map<S>,
 }
